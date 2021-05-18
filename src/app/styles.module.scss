@@ -1,0 +1,26 @@
+@import '../theme/variables';
+
+body {
+  background-color: $white;
+  padding: 0;
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+#creative-hub {
+  width: 100%;
+  height: 100%;
+}
+
+.hub {
+  width: 100%;
+}

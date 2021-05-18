@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+  app:
+    container_name: creative-integrator
+    build:
+      context: ../
+      dockerfile: ./deploy/production.Dockerfile
+    environment:
+      HOST: localhost
+      PORT: 3000
+      HTTPS: 'false'
+      REACT_APP_BACKEND_URL: https://api-stage.hub.crtweb.ru
+    ports:
+      - 3000:3000
