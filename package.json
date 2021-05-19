@@ -31,7 +31,8 @@
     "release:minor": "standard-version --release-as minor",
     "release:patch": "standard-version --release-as patch",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chromatic": "npx chromatic --project-token=ccab5d4ff445"
   },
   "husky": {
     "hooks": {
@@ -119,6 +120,7 @@
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
     "babel-loader": "^8.2.2",
+    "chromatic": "^5.8.1",
     "commitizen": "^4.2.4",
     "compression-webpack-plugin": "^7.1.2",
     "css-loader": "^5.2.4",

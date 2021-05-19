@@ -1,4 +1,3 @@
-import {actions} from '@storybook/addon-actions'
 import {Meta, Story} from '@storybook/react'
 
 import Button from './Button'
@@ -8,9 +7,19 @@ export default {
   title: 'Elements/Button',
   component: Button,
   argTypes: {
-    onClick: {...actions('onClick')},
-    label: { control: { type: 'accent' } }
-
+    onClick: {action: 'clicked'},
+    theme: {
+      control: {
+        type: 'radio',
+        options: ['light', 'dark']
+      }
+    },
+    type: {
+      control: {
+        type: 'select',
+        options: ['save', 'accent', 'additional', 'dangerous', 'inversion']
+      }
+    }
   },
 } as Meta
 
@@ -29,11 +38,4 @@ DarkMode.args = {
 }
 DarkMode.parameters = {
   backgrounds: {default: 'dark'},
-}
-
-export const Accent = Template.bind({})
-Accent.args = {
-  label: 'Button',
-  theme: 'light',
-  type: 'accent'
 }
