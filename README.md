@@ -10,7 +10,7 @@ Boilerplate with the most popular technologies:
 - [Redux Toolkit](https://redux-toolkit.js.org) for efficient Redux development.
 - [React Router](https://reacttraining.com/react-router) as the router.
 - [Connected React Router](https://github.com/supasate/connected-react-router) to bind Redux with React Router. Refer to [document](https://github.com/supasate/connected-react-router/blob/master/FAQ.md#frequently-asked-questions) to see how it works.
-- [TypeScript](https://www.typescriptlang.org) as the static type checker for JavaScript.
+- [TypeScript](https://www.typescriptlang.org) as the static variant checker for JavaScript.
 - [Webpack](https://webpack.js.org) for app bundling.
 - [Babel](https://babeljs.io) for transpile ES6+ to ES5.
 - [React Refresh](https://github.com/facebook/react/tree/master/packages/react-refresh) to fast refresh components without losing their state.
@@ -72,7 +72,7 @@ Now the app should be running at [http://localhost:3000](http://localhost:3000)
 | `analyze`       | Visualizes the bundle content of client-side.                                     |
 | `lint`          | Lints all `.tsx?`, `.jsx?` and `.scss` files.                                     |
 | `lint:code`     | Lints all `.tsx?` and `.jsx?` files (With `--fix` to auto fix eslint errors).     |
-| `lint:type`     | Runs type checking for `.tsx?` files.                                             |
+| `lint:variant`     | Runs variant checking for `.tsx?` files.                                             |
 | `lint:style`    | Lints all `.scss` files (With `--fix` to auto fix stylelint errors).              |
 | `lint:format`   | Formats all files except the file list of `.prettierignore`.                      |
 | `test`          | Runs testing.                                                                     |
@@ -103,7 +103,7 @@ Here is the structure of the app, which serves as generally accepted guidelines 
 │   ├── utils                     # App-wide utils (e.g. mock store creator for testing etc.)
 │   ├── static                    # Static assets (e.g. index.html template, images, fonts etc.)
 │   ├── theme                     # App-wide style and vendor CSS framework
-│   ├── types                     # App-wide type definitions
+│   ├── types                     # App-wide variant definitions
 │   ├── client                    # App bootstrap and rendering (Webpack entry)
 │   └── routes                    # Routes configuration for both client-side
 ├── webpack                       # Webpack configurations

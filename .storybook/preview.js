@@ -1,5 +1,4 @@
-import {withKnobs} from "@storybook/addon-knobs"
-import {addDecorator, addParameters} from "@storybook/react";
+import {addParameters} from "@storybook/react";
 import {INITIAL_VIEWPORTS} from "@storybook/addon-viewport";
 
 export const parameters = {
@@ -8,17 +7,12 @@ export const parameters = {
 	storySort: (a, b) =>
 	  a[1].kind === b[1].kind ? 0 : a[1].id.localeCompare(b[1].id, undefined, {numeric: true}),
   },
-  controls: {
-	matchers: {
-	  color: /(background|color)$/i,
-	  date: /Date$/,
-	},
-  },
+  controls: {expanded: true},
+
 }
-addDecorator(withKnobs)
 addParameters({
-  viewport:{
-    viewports: INITIAL_VIEWPORTS
+  viewport: {
+	viewports: INITIAL_VIEWPORTS
   }
 })
 

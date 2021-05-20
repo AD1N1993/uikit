@@ -66,7 +66,7 @@ abstract class Request {
     //         id: nanoid(),
     //         title: 'Не удачно',
     //         text: 'Отсутствуют права',
-    //         type: 'error'
+    //         variant: 'error'
     //       }
     //       store.NotificationsStore.createNotice(notice)
     //       return Promise.reject(error.response)
@@ -75,7 +75,7 @@ abstract class Request {
     //         id: uuid(),
     //         title: data['hydra:title'],
     //         text: data['hydra:description'],
-    //         type: 'error'
+    //         variant: 'error'
     //       }
     //       store.NotificationsStore.createNotice(notice)
     //     }
