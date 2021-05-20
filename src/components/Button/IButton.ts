@@ -1,7 +1,12 @@
+import React, {SyntheticEvent} from "react";
+
 export interface IButton {
-  disabled?: boolean
-  onClick: () => void
-  label: string
-  theme: 'light' | 'dark'
-  type: 'save' | 'accent' | 'additional' | 'dangerous' | 'inversion'
+  attrs?: any
+  className?: string
+  children: React.ReactNode
+  disabled: boolean
+  onClick: (e: SyntheticEvent) => void
+  size: 's' | 'l'
+  theme?: 'light' | 'dark'
+  variant?: 'standard' | 'save' | 'accent' | 'additional' | 'dangerous' | 'inversion'
 }

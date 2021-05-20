@@ -1,26 +1,39 @@
-import React from 'react'
-import cn from 'classnames'
+import React from 'react';
+import cn from "classnames";
+import {IButton} from "./IButton";
+import s from "./Button.scss"
 
-import { IButton } from './IButton'
+const Button: React.FC<IButton> = ({
+                                     attrs,
+                                     children,
+                                     className,
+                                     disabled,
+                                     onClick,
+                                     size = 'l',
+                                     theme = 'light',
+                                     variant
+                                   }) => {
 
-import s from './Button.scss'
+  const classes = cn(s.btn, {
+    className,
+    [s['btn--disabled']]: disabled,
+    [s[`btn--${theme}`]]: theme,
+    [s[`btn--${theme}-${variant}`]]: variant,
+    [s[`btn--${size}`]]: size,
+  })
 
-const Button: React.FC<IButton> = ({ disabled, label, onClick, theme, type }) => {
+  const Tag = attrs?.href ? 'a' : 'button';
+
   return (
-    <>
-      <div
-        className={cn(s.btn, {
-          [s['btn--disabled']]: disabled,
-          [s[`btn--${theme}`]]: theme,
-          [s[`btn--${theme}-${type}`]]: type,
-        })}
-        onClick={onClick}
-        tabIndex={1}
-      >
-        {label}
-      </div>
-    </>
-  )
-}
+    <Tag
+      className={classes}
+      disabled={disabled}
+      onClick={onClick}
+      {...attrs}
+    >
+      {children}
+    </Tag>
+  );
+};
 
 export default Button
